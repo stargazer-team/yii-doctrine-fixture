@@ -13,9 +13,8 @@ final class FixtureLoaderManager
 {
     public function __construct(
         /** @var Loader[] */
-        private array $loaders,
+        private array $loaders = [],
     ) {
-        $this->loaders = [];
     }
 
     public function getLoader(string $entityManagerName): Loader

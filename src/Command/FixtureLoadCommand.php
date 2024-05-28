@@ -31,13 +31,19 @@ final class FixtureLoadCommand extends Command
             ->setName('doctrine:fixture:load')
             ->setDescription('Load fixture')
             ->addOption('em', 'e', InputOption::VALUE_REQUIRED, 'Entity manager name')
+            ->addOption(
+                'excluded',
+                mode: InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
+                description: 'Exclude purge tables',
+                default: [],
+            )
             ->setHelp(
                 <<<EOT
 The <info>%command.name%</info> command load fixture:
 
 You can also optionally specify the name of the entity manager:
 
-    <info>php %command.full_name% --em=default</info>
+    <info>php %command.full_name% --em=default --exclude=table_name</info>
 EOT
             );
     }
@@ -51,7 +57,13 @@ EOT
 
         $entityManager = $this->doctrineManager->getManager($emName);
 
-        $executor = new ORMExecutor($entityManager, new ORMPurger());
+        /** @psalm-var array<array-key, string> $excludedTables */
+        $excludedTables = $input->getOption('excluded');
+
+        $executor = new ORMExecutor(
+            $entityManager,
+            new ORMPurger($entityManager, $excludedTables)
+        );
         $executor->execute($loader->getFixtures());
 
         $output->writeln(sprintf('<info>Load fixture for entity manager "%s"</info>', $emName));
