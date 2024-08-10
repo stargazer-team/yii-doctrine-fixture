@@ -9,6 +9,7 @@ use Doctrine\Common\DataFixtures\Loader;
 use RuntimeException;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Injector\Injector;
+use Yiisoft\Yii\DoctrineFixture\Enum\ConfigOptions;
 use Yiisoft\Yii\DoctrineFixture\FixtureLoaderManager;
 
 use function sprintf;
@@ -34,13 +35,13 @@ final class FixtureFactory
     {
         $fixtureLoaders = [];
 
-        if (isset($fixtureConfig['entity_managers'])) {
-            foreach ($fixtureConfig['entity_managers'] as $entityManagerName => $config) {
+        if (isset($fixtureConfig[ConfigOptions::ENTITY_MANAGERS])) {
+            foreach ($fixtureConfig[ConfigOptions::ENTITY_MANAGERS] as $entityManagerName => $config) {
                 $loader = new Loader();
 
-                $this->loadClasses($loader, $config['classes'] ?? []);
-                $this->loadDirs($loader, $config['dirs'] ?? []);
-                $this->loadFiles($loader, $config['files']);
+                $this->loadClasses($loader, $config[ConfigOptions::CLASSES] ?? []);
+                $this->loadDirs($loader, $config[ConfigOptions::DIRS] ?? []);
+                $this->loadFiles($loader, $config[ConfigOptions::FILES]);
 
                 $fixtureLoaders[$entityManagerName] = $loader;
             }
