@@ -6,11 +6,9 @@
     <br>
 </p>
 
-[![Latest Stable Version](https://poser.pugx.org/stargazer-team/yii-doctrine-fixture/v/stable.png)](https://packagist.org/packages/stargazer-team/yii-doctrine-fixture)
-[![Total Downloads](https://poser.pugx.org/stargazer-team/yii-doctrine-fixture/downloads.png)](https://packagist.org/packages/stargazer-team/yii-doctrine-fixture)
-[![Build status](https://github.com/stargazer-team/yii-doctrine-fixture/workflows/build/badge.svg)](https://github.com/stargazer-team/yii-doctrine-fixture/actions)
-[![Code Coverage](https://scrutinizer-ci.com/g/stargazer-team/yii-doctrine-fixture/badges/coverage.png)](https://scrutinizer-ci.com/g/stargazer-team/yii-doctrine-fixture/)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/stargazer-team/yii-doctrine-fixture/badges/quality-score.png)](https://scrutinizer-ci.com/g/stargazer-team/yii-doctrine/)
+[![Latest Stable Version](https://poser.pugx.org/stargazer-team/yii-doctrine-fixture/v)](https://packagist.org/packages/stargazer-team/yii-doctrine-fixture)
+[![Total Downloads](https://poser.pugx.org/stargazer-team/yii-doctrine-fixture/downloads)](https://packagist.org/packages/stargazer-team/yii-doctrine-fixture)
+[![Build status](https://github.com/stargazer-team/yii-doctrine-fixture/actions/workflows/php.yml/badge.svg)](https://github.com/stargazer-team/yii-doctrine-fixture/actions)
 [![static analysis](https://github.com/stargazer-team/yii-doctrine-fixture/workflows/static%20analysis/badge.svg)](https://github.com/stargazer-team/yii-doctrine-fixture/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/stargazer-team/yii-doctrine-fixture/coverage.svg)](https://shepherd.dev/github/stargazer-team/yii-doctrine-fixture)
 
