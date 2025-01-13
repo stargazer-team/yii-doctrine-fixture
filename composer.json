@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=8.1.0",
-        "stargazer-team/yii-doctrine": "^2.0.1",
+        "stargazer-team/yii-doctrine": "^2.1.0",
         "doctrine/data-fixtures": "^1.8.1"
     },
     "require-dev": {
