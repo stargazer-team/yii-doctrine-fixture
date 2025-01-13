@@ -1,5 +1,9 @@
 # Yii3 Doctrine Fixture Change Log
 
+## 1.0.4
+
+- Update dependency.
+
 ## 1.0.3
 
 - Update dependency and fix readme.

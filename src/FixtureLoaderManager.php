@@ -23,7 +23,7 @@ final class FixtureLoaderManager
 
         if (null === $loader) {
             throw new RuntimeException(
-                sprintf('Not found loader by name entity manager "%s"', $entityManagerName)
+                sprintf('Not found loader by name entity manager "%s"', $entityManagerName),
             );
         }
 

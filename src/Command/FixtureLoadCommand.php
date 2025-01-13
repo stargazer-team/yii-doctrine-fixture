@@ -62,7 +62,7 @@ EOT
 
         $executor = new ORMExecutor(
             $entityManager,
-            new ORMPurger($entityManager, $excludedTables)
+            new ORMPurger($entityManager, $excludedTables),
         );
         $executor->execute($loader->getFixtures());
 
