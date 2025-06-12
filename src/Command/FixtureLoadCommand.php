@@ -37,6 +37,11 @@ final class FixtureLoadCommand extends Command
                 description: 'Exclude purge tables',
                 default: [],
             )
+            ->addOption(
+                'append',
+                mode: InputOption::VALUE_NONE,
+                description: 'Fixtures instead of purging before loading',
+            )
             ->setHelp(
                 <<<EOT
 The <info>%command.name%</info> command load fixture:
@@ -60,11 +65,13 @@ EOT
         /** @psalm-var array<array-key, string> $excludedTables */
         $excludedTables = $input->getOption('excluded');
 
+        $append = (bool)$input->getOption('append');
+
         $executor = new ORMExecutor(
             $entityManager,
             new ORMPurger($entityManager, $excludedTables),
         );
-        $executor->execute($loader->getFixtures());
+        $executor->execute($loader->getFixtures(), $append);
 
         $output->writeln(sprintf('<info>Load fixture for entity manager "%s"</info>', $emName));
 

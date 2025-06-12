@@ -16,12 +16,12 @@
     "require": {
         "php": ">=8.1.0",
         "stargazer-team/yii-doctrine": "^2.1.0",
-        "doctrine/data-fixtures": "^1.8.1"
+        "doctrine/data-fixtures": "^2.0.2"
     },
     "require-dev": {
-        "roave/infection-static-analysis-plugin": "^1.29",
-        "vimeo/psalm": "^4.30|^5.9",
-        "rector/rector": "^0.15.25"
+        "maglnet/composer-require-checker": "^4.4",
+        "vimeo/psalm": "^4.30 || ^5.26.1 || ^6.10",
+        "rector/rector": "^2.0.11"
     },
     "autoload": {
         "psr-4": {

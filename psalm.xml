@@ -6,6 +6,7 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
     findUnusedCode="false"
     findUnusedBaselineEntry="false"
+    ensureOverrideAttribute="false"
 >
     <projectFiles>
         <directory name="src" />
