@@ -1,5 +1,10 @@
 # Yii3 Doctrine Fixture Change Log
 
+## 1.0.5
+
+- Update dependency.
+- Add new option ```append``` for command ```doctrine:fixture:load```
+
 ## 1.0.4
 
 - Update dependency.
